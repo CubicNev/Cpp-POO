@@ -38,3 +38,5 @@ Si la variable puntero esta apuntando a la dirección de memoria `0x0001` y el v
 
 > **Puedes obtener un valor por medio de su referecnia de direccion en lugar de leer directamente el valor.**
 > ![Ejemplo puntero](./assets/ejemploPuntero.png)
+
+Un ejemplo de implementación de punteros se puede ver en el archivo [01-punteros.cpp](./01-punteros.cpp)
