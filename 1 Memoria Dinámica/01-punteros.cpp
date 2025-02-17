@@ -1,3 +1,11 @@
+/**
+ *  Punteros
+ *  Autor: Carlos Nevárez - CubicNev
+ *  Fecha: 12-Feb-2025
+ *
+ *  Uso básico de punteros
+*/
+
 # include <iostream>
 
 using namespace std;
