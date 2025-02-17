@@ -12,15 +12,15 @@
 using namespace std;
 
 class Persona {
-    public:
-        // Propiedades
-        string nombre = "Diana";
-        int edad = 26;
+public:
+    // Propiedades
+    string nombre = "Diana";
+    int edad = 26;
 
-        // Comportamiento
-        void saludar() {
-            cout << "Hola! Soy " << nombre << endl;
-        }
+    // Comportamiento
+    void saludar() {
+        cout << "Hola! Soy " << nombre << endl;
+    }
 };
 
 int main() {

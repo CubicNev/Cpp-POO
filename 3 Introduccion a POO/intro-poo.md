@@ -32,3 +32,58 @@ Es la capacidad de agrupar datos bajo una misma unidad.
 Una clase puede ocultar características para hacerlas inaccesibles a los demás.
 
 ## Implementación
+
+Un objeto inicia como una clase, una clase se declara con la palabra reservada `class`. La forma de encapsular los atributos de una clase de manera que se puedan acceder en cualquier parte del programa es cusando la palabra reservada `public`.
+
+```c++
+class Persona {
+public:
+    // Propiedades
+    string nombre = "Diana";
+    int edad = 26;
+};
+```
+
+Se puede hacer uso de memoria estática o dinámica, de la misam forma que con las estrucuturas de datos.
+
+```c++
+// Forma estatica
+Persona p = Persona();
+cout << p.nombre << endl;
+
+// Forma dinámica
+Persona *P = new Persona();
+cout << P->nombre << endl;
+```
+
+Se puede añadir comportamiento a los objetos, en este caso se agrega la función **`saludar()`**.
+
+```c++
+class Persona {
+public:
+    // Propiedades
+    string nombre = "Diana";
+    int edad = 26;
+
+    // Comportamiento
+    void saludar() {
+        cout << "Hola! Soy " << nombre << endl;
+    }
+};
+
+int main() {
+    // Forma estatica
+    Persona p = Persona();
+    p.saludar();
+
+    // Forma dinámica
+    Persona *P = new Persona();
+    P->saludar();
+
+    return 0;
+}
+```
+
+Las ventajas de implementar comportamiento a los objetos es que se les puede asignar un comportamiento individual a cada objeto.
+
+Puede verse el ejemplo implemetado [aqui](./05-clasePersona.cpp)
