@@ -70,3 +70,72 @@ Objeto funcion(string param) {
 ```
 
 > 📝 **Nota:** Aqui se realiza una copia del objeto actual.
+
+## Static
+
+La capacidad de las clases para mantener métodos o atributos estáticos. Es una forma en la que las clases pueden intercambiar mensajes sin tener que realizar una implementación por cada copia del objeto.
+
+Todas las clases comparten un registro de memoria. Para esto se utiliza la palabra reservada **`static`** al inicio de cada atributo.
+
+```c++
+static int contador_global;
+```
+
+Los atributos y métodos estáticos no pueden ser accedidos de forma dinámica, los miembros (funciones y atributos) definidos dentro de una clase van a pertenecer unicamente a esa clase en cuestión.
+
+### Scope resolution operator `::`
+
+C++ perimite definir los metodos fuera del cuerpo de la clase usando el nombre de la clase, mediante el *scope resolution operator* `::`. Se usa para accesar a los identificadores, como nombres de variables y funciones. [1]
+
+Su sintaxis es:
+
+```c++
+scope_name::identifier
+```
+
+Aplicaciones:
+
+- Acceder a variables globales.
+- Resolver conflictos de ambigüedad, que se dan poe usar distintos espacios de nombre.
+- Definir miembros de clase fuera de una clase.
+- Acceder a miembros estaticos.
+- Hacer referencias a clases miembro o clases derivadas (herencia).
+
+### Ejemplo
+
+En este caso, nos es util para intercambiar mensajes entre clases. De forma que las distintas copias de las clases, se deben seguir ciertas restricciones al momento de escribir el código. En el siguiente ejemplo se vel algunas de las restricciones que se deben seguir para compartir datos entre clases.
+
+```c++
+class Objeto {
+private:
+    int identificador;
+public:
+    static int contador;
+
+    // Solo se declara el constructor
+    Objeto(int identificador);
+};
+
+// Inicialización de variable estática, se hace de forma externa
+int Objeto::contador = 0;
+
+// Se aumenta el contador cada que se crea un nuevo objeto
+Objeto:Objeto(int identificador) {
+    this->identificador = identificador;
+    contador++;
+}
+
+int main(){
+    Objeto *o1 = new Objeto(123);
+    Objeto *o2 = new Objeto(321);
+
+    cout << " Numero de objetos: " <<  Objeto::contador << endl;
+}
+
+```
+
+## Herencia
+
+<!-- Referencias -->
+
+[1]: <https://www.geeksforgeeks.org/scope-resolution-operator-in-c/> "Operador ::"
