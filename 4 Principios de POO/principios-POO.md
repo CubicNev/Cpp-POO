@@ -136,6 +136,10 @@ int main(){
 
 ## Herencia
 
+Es la capacidad que tienen las clases de heredar características de una o más clases base.
+
+![Herencia](./assets/herencia.png)
+
 <!-- Referencias -->
 
 [1]: <https://www.geeksforgeeks.org/scope-resolution-operator-in-c/> "Operador ::"
