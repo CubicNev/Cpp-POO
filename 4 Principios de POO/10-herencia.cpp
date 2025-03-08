@@ -1,5 +1,5 @@
 /**
- *  Ejemplo de herencia
+ *  Ejemplo de herencia.
  *  Autor: Carlos Nevárez - CubicNev
  *  Fecha: 27-Feb-2025
  *
